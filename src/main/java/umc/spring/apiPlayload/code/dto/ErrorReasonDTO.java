@@ -1,12 +1,10 @@
 package umc.spring.apiPlayload.code.dto;
 
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.http.HttpStatus;
 
 @Builder
+@Getter
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class ErrorReasonDTO {
@@ -14,5 +12,4 @@ public class ErrorReasonDTO {
     private String code;
     private Boolean isSuccess;
     private HttpStatus httpStatus;
-
 }
