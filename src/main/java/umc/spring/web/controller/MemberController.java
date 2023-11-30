@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import umc.spring.apiPlayload.ApiResponse;
 import umc.spring.domain.dto.request.JoinReq;
 import umc.spring.domain.dto.response.JoinRes;
-import umc.spring.service.MemberService.MemberCommandService;
+import umc.spring.service.member.MemberCommandService;
 
 import javax.validation.Valid;
 

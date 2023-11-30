@@ -20,9 +20,9 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
+@Builder
 @DynamicUpdate
 @DynamicInsert
-@Builder
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Member extends BaseEntity {

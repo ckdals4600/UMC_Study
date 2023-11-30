@@ -1,6 +1,5 @@
-package umc.spring.service.MemberService;
+package umc.spring.service.member;
 
-import umc.spring.domain.Member;
 import umc.spring.domain.dto.request.JoinReq;
 import umc.spring.domain.dto.response.JoinRes;
 
