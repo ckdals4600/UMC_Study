@@ -1,15 +1,19 @@
 package umc.spring.domain;
 
 import lombok.*;
+import org.hibernate.annotations.ColumnDefault;
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
 import umc.spring.domain.common.BaseEntity;
 
 import javax.persistence.*;
 
 @Entity
 @Getter
-@Setter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
+@DynamicUpdate
+@DynamicInsert
 @Builder
 public class Store extends BaseEntity {
     @Id
@@ -18,6 +22,8 @@ public class Store extends BaseEntity {
 
     private String name;
     private String address;
+
+    @ColumnDefault("0.0")
     private Float score;
 
     @ManyToOne(fetch = FetchType.LAZY)
