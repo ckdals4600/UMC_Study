@@ -4,7 +4,11 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import umc.spring.validation.annotation.ExistCategories;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.List;
 
 @Builder
@@ -12,12 +16,20 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class JoinReq {
-    private String name;
-    private Integer gender;
-    private Integer birthYear;
-    private Integer birthMonth;
-    private Integer birthDay;
-    private String address;
-    private String specAddress;
+    @NotBlank
+    String name;
+    @NotNull
+    Integer gender;
+    @NotNull
+    Integer birthYear;
+    @NotNull
+    Integer birthMonth;
+    @NotNull
+    Integer birthDay;
+    @Size(min = 5, max = 12)
+    String address;
+    @Size(min = 5, max = 12)
+    String specAddress;
+    @ExistCategories
     private List<Long> preferCategory;
 }
