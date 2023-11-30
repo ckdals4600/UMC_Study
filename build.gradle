@@ -32,6 +32,11 @@ dependencies {
 	//Mapper
 	implementation 'org.mapstruct:mapstruct:1.4.2.Final'
 	annotationProcessor "org.mapstruct:mapstruct-processor:1.4.2.Final"
+
+	//Swagger
+	implementation 'org.springdoc:springdoc-openapi-ui:1.6.15'
+	implementation 'io.springfox:springfox-swagger2:2.9.2'
+	implementation 'io.springfox:springfox-swagger-ui:2.9.2'
 }
 
 tasks.named('bootBuildImage') {
