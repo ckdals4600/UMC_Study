@@ -34,6 +34,10 @@ public class Member extends BaseEntity {
 
     private Integer age;
 
+    private Integer birthYear;
+    private Integer birthMonth;
+    private Integer birthDay;
+
     @Column(nullable = false, length = 40)
     private String address;
 
