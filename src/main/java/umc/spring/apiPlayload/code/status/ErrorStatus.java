@@ -5,7 +5,6 @@ import lombok.Getter;
 import org.springframework.http.HttpStatus;
 import umc.spring.apiPlayload.code.BaseErrorCode;
 import umc.spring.apiPlayload.code.dto.ErrorReasonDTO;
-import umc.spring.domain.FoodCategory;
 
 @Getter
 @AllArgsConstructor
@@ -27,7 +26,8 @@ public enum ErrorStatus implements BaseErrorCode {
     //테스트
     TEMP_EXCEPTION(HttpStatus.BAD_REQUEST, "TEMP4001", "이거는 테스트"),
 
-    FOOD_CATEGORY_NOT_FOUND(HttpStatus.NOT_FOUND,"FOOD4001","잘못된 음식 종류 입니다.");
+    FOOD_CATEGORY_NOT_FOUND(HttpStatus.NOT_FOUND,"FOOD4001","잘못된 음식 종류 입니다."),
+    REGION_NOT_EXIST(HttpStatus.NOT_FOUND,"REGION4001","존재하지 않는 지역입니다.");
 
     private final HttpStatus httpStatus;
     private final String code;
